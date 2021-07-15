@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="h1">Caculator</h1>
+<table>
+    <tr>
+        <td>
+            <input id="so" type="number" value="12">
+        </td>
+        <td>
+            <select id="operator" onchange="getResult()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </td>
+        <td>
+            <input id="luong" type="number" value="12">
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function add(){
+        let a= parseInt(document.getElementById("so").value)
+        let b= parseInt(document.getElementById("luong").value)
+        let tong =a + b;
+        document.getElementById('result').innerHTML='Result tính công:'+ tong
+    }
+    function getResult(){
+        let a= parseInt(document.getElementById("so").value);
+        let b= parseInt(document.getElementById("luong").value);
+        let operator= document.getElementById("operator").value;
+        let result = "";
+        switch (operator){
+            case "*":
+                result = a *b;
+                break;
+            case "/":
+                result = a/b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "+":
+                result = a + b;
+                break;
+        }
+                document.getElementById("result").innerHTML = "result" +result ;
+
+                // if (operator == "*")
+                //     result = a * b;
+                // else if (operator == "/")
+                //     result = a / b;
+                // else if (operator == "-")
+                //     result = a - b;
+                // else result = a + b;
+                // document.getElementById('result').innerHTML = 'Result:' + result;
+
+    function hieu(){
+        let a= parseInt(document.getElementById('so').value)
+        let b= parseInt(document.getElementById('luong').value)
+        let tong = a - b;
+        document.getElementById('result').innerHTML='Result tính hiệu:'+ tong
+    }
+    function nhan(){
+        let a= parseInt(document.getElementById('so').value)
+        let b= parseInt(document.getElementById('luong').value)
+        let tong = a * b;
+        document.getElementById('result').innerHTML='Result tính nhân:'+ tong
+    }
+    function chia(){
+        let a= parseInt(document.getElementById('so').value)
+        let b= parseInt(document.getElementById('luong').value)
+        let tong = a / b;
+        document.getElementById('result').innerHTML='Reult tính chia:'+ tong
+    }
+    }
+</script>
+</body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="ready()">
+<img id="haha" src="Nobita_4.png" style="position: absolute; left: 0;right: 0;" height="100" width="100" />
+<script>
+  function dilen(){
+    let dichuyen = document.getElementById("haha");
+    dichuyen.style.top = parseInt(dichuyen.style.top) - 5 + "px";
+  }
+  function dixuong(){
+    var dichuyen = document.getElementById("haha");
+    dichuyen.style.top = parseInt(dichuyen.style.top) + 5 + "px";
+  }
+  function ditrai(){
+    var dichuyen = document.getElementById("haha");
+    dichuyen.style.left = parseInt(dichuyen.style.left) - 5 -"px";
+  }
+  function diphai(){
+    var dichuyen = document.getElementById("haha");
+    dichuyen.style.left = parseInt(dichuyen.style.left) + 5 + "px";
+  }
+function luachon(evt){
+    switch (evt.keyCode){
+      case ("37"):
+        ditrai()
+            break;
+      case ("39"):
+        diphai()
+        break;
+      case ("38"):
+        dilen()
+        break;
+      case ("40"):
+        dixuong()
+        break;
+    }
+}
+function ready(){
+    window.addEventListener("keydown", luachon);
+}
+</script>
+</body>
+</html>

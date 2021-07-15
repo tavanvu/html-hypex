@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let weight = +prompt("nhap can nang")
+  let heigt = +prompt("nhap chieu cao")
+  let bmi
+  bmi= weight /(heigt*heigt)
+  if (bmi< 18){
+    alert("underway")
+  }else if(18.5<=bmi&&bmi<=25){
+    alert("norma")
+  }else if (25<=bmi && bmi<=30){
+    alert("overweight")
+  } else if (30<= bmi){
+    alert("obese")
+  } else {
+    alert("ban nhap k dung")
+  }
+</script>
+</body>
+</html>

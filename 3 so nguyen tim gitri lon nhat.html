@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" name="nhap so a"><br>
+<input type="text" id="haha" name="nhap so b"><br>
+<input type="text" id="hihi" name="nhap so c">
+<button type="button" onclick="nhapvo()">tinh</button>
+<script>
+    function nhapvo(){
+        let a = document.getElementById("nhap").value
+        let b = document.getElementById("haha").value
+        let c = document.getElementById("hihi").value
+        a = parseInt(a)
+        b=parseInt(b)
+        c=parseInt(c)
+  if (a>b && a>c ){
+    document.write(a)
+  } else if (a>b&& a<c)
+      document.write(c)
+    if (a<b && b>c ){
+      document.write(b)
+    }else if (a<b && b<c ){
+      document.write(c)
+    }
+    }
+</script>
+</body>
+</html>
